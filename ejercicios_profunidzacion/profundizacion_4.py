@@ -33,3 +33,89 @@ contenido.
 
 print('Ejercicios de práctica con cadenas')
 # Empezar aquí la resolución del ejercicio
+
+palabra_1 = str(input('Ingrese 1er palabra: '))
+palabra_2 = str(input('Ingrese 2da palabra:'))
+palabra_3 = str(input('Ingrese 3er palabra:'))
+
+orden_deseado = int(input('''Si desea ordenar por orden alfabético digite 1,
+si desea ordenar por cantidad de letras difite 2: '''))
+
+if orden_deseado == 1:
+    if (palabra_2 < palabra_1 > palabra_3) and  (palabra_2 > palabra_3):
+        print(f'''
+        {palabra_1}
+        {palabra_2}
+        {palabra_3}
+        ''')
+    elif (palabra_2 < palabra_1 > palabra_3) and  (palabra_3 > palabra_2):
+        print(f'''
+        {palabra_1}
+        {palabra_3}
+        {palabra_2} ''')
+    elif (palabra_1 < palabra_2 > palabra_3) and (palabra_1 > palabra_3):
+        print(f'''
+        {palabra_2}
+        {palabra_1}
+        {palabra_3}
+        ''')
+    elif (palabra_1 < palabra_2 > palabra_3) and (palabra_3 > palabra_1):
+        print(f'''
+        {palabra_2}
+        {palabra_3}
+        {palabra_1}
+         ''')
+    elif (palabra_1 < palabra_3 > palabra_2) and (palabra_1 > palabra_2):
+        print(f'''
+        {palabra_3}
+        {palabra_1}
+        {palabra_3}
+        ''')
+    elif (palabra_1 < palabra_3 > palabra_2) and (palabra_2 > palabra_1):
+        print(f'''
+        {palabra_3}
+        {palabra_2}
+        {palabra_1}
+         ''')
+
+elif orden_deseado == 2:
+    if (len(palabra_2) < len(palabra_1) > len(palabra_3)) and (len(palabra_2) > len(palabra_3)):
+        print(f'''
+        {palabra_1}
+        {palabra_2}
+        {palabra_3}
+        ''')
+    elif (len(palabra_2) < len(palabra_1) > len(palabra_3)) and (len(palabra_3) > len(palabra_2)):
+        print(f'''
+        {palabra_1}
+        {palabra_3}
+        {palabra_2} ''')
+    elif (len(palabra_1) < len(palabra_2) > len(palabra_3)) and (len(palabra_1) > len(palabra_3)):
+        print(f'''
+        {palabra_2}
+        {palabra_1}
+        {palabra_3}
+        ''')
+    elif (len(palabra_1) < len(palabra_2) > len(palabra_3)) and (len(palabra_3) > len(palabra_1)):
+        print(f'''
+        {palabra_2}
+        {palabra_3}
+        {palabra_1}
+         ''')
+    elif (len(palabra_1) < len(palabra_3) > len(palabra_2)) and (len(palabra_1) > len(palabra_2)):
+        print(f'''
+        {palabra_3}
+        {palabra_1}
+        {palabra_3}
+        ''')
+    elif (len(palabra_1) < len(palabra_3) > len(palabra_2)) and (len(palabra_2) > len(palabra_1)):
+        print(f'''
+        {palabra_3}
+        {palabra_2}
+        {palabra_1}
+         ''')
+else:
+    print('opción ingresada no válida')
+    
+
+
